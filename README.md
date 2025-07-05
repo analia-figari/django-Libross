@@ -15,7 +15,7 @@ Este proyecto consiste en una aplicación web construida con Django + Django RES
 3. Django REST Framework 3.14+
 4. PostgreSQL
 
-### Librerías utilizadas
+## Librerías utilizadas
 
 ```
 asgiref==3.7.2
@@ -71,6 +71,9 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
+
+## Crear la base de datos en PGAdmin4
+![image](https://github.com/user-attachments/assets/d7ebb0d8-d411-4085-865d-b01f7c80602d)
 
 
 
