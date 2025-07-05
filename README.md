@@ -77,14 +77,6 @@ python manage.py runserver
 
 ## Modelo de datos
 
-<pre>```class Libro(models.Model):
-    nombre = models.CharField(max_length=200)
-    autor = models.ForeignKey(Autor, on_delete=models.CASCADE, related_name="libros")
-    fecha_lanzamiento = models.DateField()
-    genero = models.CharField(max_length=100)
-    calificacion = models.IntegerField(choices=CALIFICACIONES)
-
-    def __str__(self):
-        return self.nombre```</pre>
+<pre> ## 📦 Modelo de datos ```python class Libro(models.Model): nombre = models.CharField(max_length=200) autor = models.ForeignKey(Autor, on_delete=models.CASCADE, related_name="libros") fecha_lanzamiento = models.DateField() genero = models.CharField(max_length=100) calificacion = models.IntegerField(choices=CALIFICACIONES) def __str__(self): return self.nombre ``` </pre>
 
 
