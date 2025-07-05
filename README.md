@@ -61,6 +61,9 @@ cd Libro
 python manage.py startapp libros
 ```
 
+## Crear la base de datos en PGAdmin4
+![image](https://github.com/user-attachments/assets/d7ebb0d8-d411-4085-865d-b01f7c80602d)
+
 ### Migrar la base de datos:
 ```
 python manage.py makemigrations
@@ -72,8 +75,17 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-## Crear la base de datos en PGAdmin4
-![image](https://github.com/user-attachments/assets/d7ebb0d8-d411-4085-865d-b01f7c80602d)
+## Modelo de datos
 
+```
+class Libro(models.Model):
+    nombre = models.CharField(max_length=200)
+    autor = models.ForeignKey(Autor, on_delete=models.CASCADE, related_name="libros")
+    fecha_lanzamiento = models.DateField()
+    genero = models.CharField(max_length=100)
+    calificacion = models.IntegerField(choices=CALIFICACIONES)
 
+    def __str__(self):
+        return self.nombre
+```
 
