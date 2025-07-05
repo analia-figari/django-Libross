@@ -77,6 +77,76 @@ python manage.py runserver
 
 ## Modelo de datos
 
-<pre> ## 📦 Modelo de datos ```python class Libro(models.Model): nombre = models.CharField(max_length=200) autor = models.ForeignKey(Autor, on_delete=models.CASCADE, related_name="libros") fecha_lanzamiento = models.DateField() genero = models.CharField(max_length=100) calificacion = models.IntegerField(choices=CALIFICACIONES) def __str__(self): return self.nombre ``` </pre>
+```python
+class Libro(models.Model):
+    nombre = models.CharField(max_length=200)
+    autor = models.ForeignKey(Autor, on_delete=models.CASCADE, related_name="libros")
+    fecha_lanzamiento = models.DateField()
+    genero = models.CharField(max_length=100)
+    calificacion = models.IntegerField(choices=CALIFICACIONES)
+
+    def __str__(self):
+        return self.nombre
+```
+
+## El siguiente código es el registro de rutas (endpoints) para crear, ver, actualizar y eliminar libros y autores.
+
+```python
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import LibroViewSet, AutorViewSet
+
+router = DefaultRouter()
+router.register(r'libros', LibroViewSet)
+router.register(r'autores', AutorViewSet)
+
+urlpatterns = [
+    path('', include(router.urls)),
+]
+```
+
+## Registro de datos desde Postman (POST)
+
+```postman
+POST http://127.0.0.1:8000/libros/
+POST http://127.0.0.1:8000/autores/
+
+```
+
+## VISUALIZACION EN JSON: 
+
+### Libros
+
+```postman
+GET http://127.0.0.1:8000/libros/
+```
+```json
+  {
+        "id": 1,
+        "nombre": "Cien años de soledad",
+        "fecha_lanzamiento": "1967-06-05",
+        "genero": "Realismo mágico",
+        "calificacion": 2,
+        "autor": 1
+    }
+```
+
+### Autores
+
+```postman
+GET http://127.0.0.1:8000/autores/
+```
+```json
+   {
+        "id": 1,
+        "nombre": "Gabriel García Márquez",
+        "nacionalidad": "Colombiana"
+    }
+```
+
+
+
+
+
 
 
