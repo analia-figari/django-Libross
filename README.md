@@ -77,8 +77,7 @@ python manage.py runserver
 
 ## Modelo de datos
 
-<pre>```
-class Libro(models.Model):
+<pre>```class Libro(models.Model):
     nombre = models.CharField(max_length=200)
     autor = models.ForeignKey(Autor, on_delete=models.CASCADE, related_name="libros")
     fecha_lanzamiento = models.DateField()
@@ -86,7 +85,6 @@ class Libro(models.Model):
     calificacion = models.IntegerField(choices=CALIFICACIONES)
 
     def __str__(self):
-        return self.nombre
-```</pre>
+        return self.nombre```</pre>
 
 
