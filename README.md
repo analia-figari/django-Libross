@@ -15,8 +15,9 @@ Este proyecto consiste en una aplicación web construida con Django + Django RES
 3. Django REST Framework 3.14+
 4. PostgreSQL
 
-## Librerias
+### Librerías utilizadas
 
+```
 asgiref==3.7.2
 Django==4.2.21
 djangorestframework==3.14.0
@@ -32,6 +33,8 @@ python-dateutil==2.9.0.post0
 six==1.16.0
 sqlparse==0.4.4
 tzdata==2024.1
+```
+
 
 
 
