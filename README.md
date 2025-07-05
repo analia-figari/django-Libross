@@ -38,21 +38,39 @@ tzdata==2024.1
 
 ## Instalacion y configuracion 
 
-# Crear un entorno virtual:
+### Crear un entorno virtual:
 ```
 python -m venv venv
 ```
 
-# Activar entorno virtual:
+### Activar entorno virtual:
 ```
 Windows venv\Scripts\activate
 ```
 
-# Instalar dependencias:
+### Instalar dependencias:
 ```
-Windows venv\Scripts\activate
+pip install django
+pip install djangorestframework
 ```
 
+### Crear el proyecto:
+```
+django-admin startproject Libro 
+cd Libro
+python manage.py startapp libros
+```
+
+### Migrar la base de datos:
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+### Correr el servidor:
+```
+python manage.py runserver
+```
 
 
 
