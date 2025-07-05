@@ -31,10 +31,27 @@ pillow==10.3.0
 pyparsing==3.1.2
 python-dateutil==2.9.0.post0
 six==1.16.0
-sqlparse==0.4.4
+psycopg2==2.9.9
+psycopg2-binary==2.9.9
 tzdata==2024.1
 ```
 
+## Instalacion y configuracion 
+
+# Crear un entorno virtual:
+```
+python -m venv venv
+```
+
+# Activar entorno virtual:
+```
+Windows venv\Scripts\activate
+```
+
+# Instalar dependencias:
+```
+Windows venv\Scripts\activate
+```
 
 
 
