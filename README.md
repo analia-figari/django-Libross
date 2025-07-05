@@ -1,6 +1,6 @@
-#Libros Aplicacion
+# Libros Aplicacion
 
-##Descripcion del proyecto
+## Descripcion del proyecto
 Este proyecto consiste en una aplicación web construida con Django + Django REST Framework para:
 
 - Registrar libros con sus respectivos autores.
@@ -8,14 +8,14 @@ Este proyecto consiste en una aplicación web construida con Django + Django RES
 - Visualizar gráficas de análisis utilizando matplotlib.
 - Obtener sugerencias de libros por género y valoración.
 
-##Requisitos y versiones
+## Requisitos y versiones
 
 1. Python 3.8+
 2. Django 4.2.21
 3. Django REST Framework 3.14+
 4. PostgreSQL
 
-##Librerias
+## Librerias
 
 asgiref==3.7.2
 Django==4.2.21
