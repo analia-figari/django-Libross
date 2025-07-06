@@ -129,7 +129,22 @@ urlpatterns = [
 ```http
 POST http://127.0.0.1:8000/libros/
 POST http://127.0.0.1:8000/autores/
+```
+Este endpoint permite crear un nuevo libro en la base de datos. Debe enviarse un JSON con los campos requeridos, como por ejemplo:
 
+```json
+{
+  "titulo": "Cien años de soledad",
+  "descripcion": "Una novela emblemática de Gabriel García Márquez.",
+  "fecha_publicacion": "1967-05-30",
+  "autor": 1
+}
+```
+```json
+{
+  "nombre": "Gabriel García Márquez",
+  "nacionalidad": "Colombiana"
+}
 ```
 
 
