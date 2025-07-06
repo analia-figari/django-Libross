@@ -132,7 +132,23 @@ POST http://127.0.0.1:8000/autores/
 
 ```
 
-## Visualizacion en JSON: 
+
+## Listado de libros y autores
+
+```http
+GET http://127.0.0.1:8000/libros/
+```
+
+![image](https://github.com/user-attachments/assets/8cd7a25c-a301-41d1-b7e9-e67e5edc3acc)
+
+```http
+GET http://127.0.0.1:8000/autores/
+```
+
+![image](https://github.com/user-attachments/assets/30850d4c-5261-48d0-99a9-9ad8c2f641e6)
+
+
+### Visualizacion en JSON de libros: 
 
 El serializer define cómo se ve la información
 
@@ -154,11 +170,6 @@ class LibroSerializer(serializers.ModelSerializer):
         fields = ['id', 'nombre', 'fecha_lanzamiento', 'genero', 'calificacion', 'autor', 'autor_nombre']
 ```
 
-### Libros
-
-```http
-GET http://127.0.0.1:8000/libros/
-```
 ```json
   {
         "id": 13,
@@ -171,11 +182,8 @@ GET http://127.0.0.1:8000/libros/
     }
 ```
 
-### Autores
+### Visualizacion en JSON de autores
 
-```http
-GET http://127.0.0.1:8000/autores/
-```
 ```json
    {
         "id": 12,
@@ -199,11 +207,13 @@ DELETE http://127.0.0.1:8000/libros/18/
 ### Actualizar
 
 Para actualizar la informacion del Libro se debe especificar el ID
+
 ```http
 PUT http://127.0.0.1:8000/libros/18/
 ```
 
 Se requieren los datos del libro:
+
 ![image](https://github.com/user-attachments/assets/1800006e-8881-4aab-b0be-a7e7569a1be7)
 
 Entonces se cambia y actualiza lo deseado:
@@ -230,6 +240,15 @@ python Libro/graficos.py
 ```
 
 Antes de ejecutar, asegurar de que el entorno virtual esté activado y que la base de datos tenga registros cargados.
+
+Biblioteca utilizadas para los Scripts
+
+* matplotlib.pyplot: Crear y mostrar los gráficos.
+* collections.Counter: Contar elementos, como número de libros por autor o género.
+* libros.models: Acceso a los modelos Libro y Autor para obtener los datos.
+* statistics: Para calcular promedios.
+
+
 
 
 
