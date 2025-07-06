@@ -306,9 +306,6 @@ def graficar_libros_por_nacionalidad():
 
 ![image](https://github.com/user-attachments/assets/de8de72d-92a8-47a4-8e00-3ccd2b58243f)
 
-Claro, aquí tenés una **descripción para tu README** especificando que el proyecto está bajo la **Licencia MIT**, lista para copiar y pegar:
-
----
 
 ##  Licencia
 
@@ -321,10 +318,6 @@ Esto significa que sos libre de:
 * Compartirlo o integrarlo en otros proyectos.
 
 **Siempre y cuando** se mantenga el aviso de copyright original y la licencia MIT.
-
-Aquí tienes las licencias para las bibliotecas que mencionaste, en formato listo para añadir a tu README:
-
----
 
 ##  Licencias de las bibliotecas utilizadas
 
