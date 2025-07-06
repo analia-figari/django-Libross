@@ -110,7 +110,7 @@ class Libro(models.Model):
 
 ## Registro de datos desde Postman (POST)
 
-El siguiente código define qué endpoints existen y qué acciones están permitidas.
+Este código es el registro de rutas (endpoints) para crear, ver y administrar libros y autores.
 
 ```python
 from django.urls import path, include
@@ -126,7 +126,7 @@ urlpatterns = [
 ]
 ```
 
-```postman
+```http
 POST http://127.0.0.1:8000/libros/
 POST http://127.0.0.1:8000/autores/
 
@@ -135,6 +135,7 @@ POST http://127.0.0.1:8000/autores/
 ## Visualizacion en JSON: 
 
 El serializer define cómo se ve la información
+
 ```python
 from rest_framework import serializers
 from .models import Libro, Autor
@@ -155,35 +156,45 @@ class LibroSerializer(serializers.ModelSerializer):
 
 ### Libros
 
-```postman
+```http
 GET http://127.0.0.1:8000/libros/
 ```
 ```json
   {
-        "id": 1,
-        "nombre": "Cien años de soledad",
-        "fecha_lanzamiento": "1967-06-05",
-        "genero": "Realismo mágico",
-        "calificacion": 2,
-        "autor": 1
+        "id": 13,
+        "nombre": "Sanctum",
+        "fecha_lanzamiento": "2014-08-26",
+        "genero": "Misterio",
+        "calificacion": 3,
+        "autor": 12,
+        "autor_nombre": "Madeleine Roux"
     }
 ```
 
 ### Autores
 
-```postman
+```http
 GET http://127.0.0.1:8000/autores/
 ```
 ```json
    {
-        "id": 1,
-        "nombre": "Gabriel García Márquez",
-        "nacionalidad": "Colombiana"
+        "id": 12,
+        "nombre": "Madeleine Roux",
+        "nacionalidad": "Norteamericana"
     }
 ```
 
+### Eliminar 
 
+Se especifica el ID del libro que se desea eliminar 
 
+```http
+DELETE http://127.0.0.1:8000/libros/18/
+```
+
+![image](https://github.com/user-attachments/assets/c2c524e0-f4da-4b91-91e1-fda5b8cc29ab)
+
+![image](https://github.com/user-attachments/assets/4399785f-6be1-415d-8389-869848cbcf92)
 
 
 
