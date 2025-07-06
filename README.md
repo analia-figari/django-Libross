@@ -196,6 +196,40 @@ DELETE http://127.0.0.1:8000/libros/18/
 
 ![image](https://github.com/user-attachments/assets/4399785f-6be1-415d-8389-869848cbcf92)
 
+### Actualizar
+
+Para actualizar la informacion del Libro se debe especificar el ID
+```http
+PUT http://127.0.0.1:8000/libros/18/
+```
+
+Se requieren los datos del libro:
+![image](https://github.com/user-attachments/assets/1800006e-8881-4aab-b0be-a7e7569a1be7)
+
+Entonces se cambia y actualiza lo deseado:
+
+![image](https://github.com/user-attachments/assets/47b22037-4489-434c-bf7c-f9c2d290b854)
+
+![image](https://github.com/user-attachments/assets/50be69f0-a084-4455-b2b5-ab7b1f1f03db)
+
+
+##  Scripts de análisis y visualización
+
+Dentro del proyecto se incluyen **scripts independientes** que permiten analizar los datos registrados en la base de datos. Estos scripts utilizan `matplotlib` para generar **gráficos estadísticos**, como por ejemplo:
+
+* Cantidad de libros por autor.
+* Promedio de calificación por género.
+* Sugerencias basadas en calificaciones altas.
+
+Los scripts no forman parte del flujo del servidor Django (vistas o URLs), pero se ejecutan directamente desde la terminal para generar reportes visuales.
+
+> Para ejecutarlos:
+
+```bash
+python Libro/graficos.py
+```
+
+Antes de ejecutar, asegurar de que el entorno virtual esté activado y que la base de datos tenga registros cargados.
 
 
 
