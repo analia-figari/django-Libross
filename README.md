@@ -250,7 +250,8 @@ Biblioteca utilizadas para los Scripts
 
 ### Cantidad de libros por autor
 
-Este gráfico de barras muestra cuántos libros tiene registrados cada autor en la base de datos. Permite identificar qué autores son los más prolíficos y facilita comparaciones rápidas entre ellos.
+Este gráfico de barras muestra cuántos libros tiene registrados cada autor en la base de datos. 
+
 ![image](https://github.com/user-attachments/assets/112bf123-3067-4e2b-b1d1-8b1c009a0d8a)
 
 ---
@@ -275,7 +276,9 @@ Este gráfico muestra cuántos libros se encuentran dentro de cada rango de cali
 
 Este gráfico presenta la calificación promedio de los libros escritos por cada autor. Ayuda a visualizar qué autores tienen una recepción más positiva en promedio por parte de los lectores.
 
-```python def graficar_promedio_calificacion_por_autor():```
+```python 
+def graficar_promedio_calificacion_por_autor():
+```
 
 ![image](https://github.com/user-attachments/assets/094ae472-46ce-4cb4-b6d4-b05126fb8ec0)
 
@@ -285,7 +288,10 @@ Este gráfico presenta la calificación promedio de los libros escritos por cada
 
 Histograma que muestra la frecuencia de cada calificación asignada a los libros. Permite observar si las calificaciones están distribuidas uniformemente o si hay alguna tendencia clara (por ejemplo, mayoría de calificaciones altas o bajas).
 
-```python def graficar_distribucion_calificaciones():```
+```python
+def graficar_distribucion_calificaciones():
+```
+
 ![image](https://github.com/user-attachments/assets/8a0fad82-214b-465f-9958-969f4fe5c5ad)
 
 ---
@@ -294,7 +300,10 @@ Histograma que muestra la frecuencia de cada calificación asignada a los libros
 
 Gráfico circular (torta) que representa el porcentaje de libros según la nacionalidad de sus autores.
 
-```python def graficar_libros_por_nacionalidad():```
+```python 
+def graficar_libros_por_nacionalidad():
+```
+
 ![image](https://github.com/user-attachments/assets/de8de72d-92a8-47a4-8e00-3ccd2b58243f)
 
 
