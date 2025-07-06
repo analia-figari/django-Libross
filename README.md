@@ -77,7 +77,25 @@ python manage.py runserver
 
 ## Modelo de datos
 
+El siguiente código es el modelo completo y funcional, incluye todo lo necesario para registrar libros y autores correctamente.
+
 ```python
+from django.db import models
+
+class Autor(models.Model):
+    nombre = models.CharField(max_length=100)
+    nacionalidad = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.nombre
+
+CALIFICACIONES = [
+    (1, 'Bueno'),
+    (2, 'Muy bueno'),
+    (3, 'Malo'),
+    (4, 'Muy malo'),
+]
+
 class Libro(models.Model):
     nombre = models.CharField(max_length=200)
     autor = models.ForeignKey(Autor, on_delete=models.CASCADE, related_name="libros")
@@ -87,9 +105,12 @@ class Libro(models.Model):
 
     def __str__(self):
         return self.nombre
+
 ```
 
-## El siguiente código es el registro de rutas (endpoints) para crear, ver, actualizar y eliminar libros y autores.
+## Registro de datos desde Postman (POST)
+
+El siguiente código define qué endpoints existen y qué acciones están permitidas.
 
 ```python
 from django.urls import path, include
@@ -105,15 +126,32 @@ urlpatterns = [
 ]
 ```
 
-## Registro de datos desde Postman (POST)
-
 ```postman
 POST http://127.0.0.1:8000/libros/
 POST http://127.0.0.1:8000/autores/
 
 ```
 
-## VISUALIZACION EN JSON: 
+## Visualizacion en JSON: 
+
+El serializer define cómo se ve la información
+```python
+from rest_framework import serializers
+from .models import Libro, Autor
+
+class AutorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Autor
+        fields = '__all__'
+
+
+class LibroSerializer(serializers.ModelSerializer):
+    autor_nombre = serializers.CharField(source='autor.nombre', read_only=True)
+
+    class Meta:
+        model = Libro
+        fields = ['id', 'nombre', 'fecha_lanzamiento', 'genero', 'calificacion', 'autor', 'autor_nombre']
+```
 
 ### Libros
 
