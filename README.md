@@ -246,8 +246,56 @@ Biblioteca utilizadas para los Scripts
 * matplotlib.pyplot: Crear y mostrar los gráficos.
 * collections.Counter: Contar elementos, como número de libros por autor o género.
 * libros.models: Acceso a los modelos Libro y Autor para obtener los datos.
-* statistics: Para calcular promedios.
 
+
+### Cantidad de libros por autor
+
+Este gráfico de barras muestra cuántos libros tiene registrados cada autor en la base de datos. Permite identificar qué autores son los más prolíficos y facilita comparaciones rápidas entre ellos.
+![image](https://github.com/user-attachments/assets/112bf123-3067-4e2b-b1d1-8b1c009a0d8a)
+
+---
+
+### Cantidad de libros por género
+
+Representa la cantidad total de libros agrupados por género literario.
+
+![image](https://github.com/user-attachments/assets/28dd957f-4891-4e9d-abb6-388d8af06d99)
+
+---
+
+### Libros según calificación
+
+Este gráfico muestra cuántos libros se encuentran dentro de cada rango de calificación (por ejemplo, del 1 al 5). 
+
+![image](https://github.com/user-attachments/assets/b16f3b8f-9b21-496d-80c7-6c15f711d838)
+
+---
+
+### Promedio de calificación por autor
+
+Este gráfico presenta la calificación promedio de los libros escritos por cada autor. Ayuda a visualizar qué autores tienen una recepción más positiva en promedio por parte de los lectores.
+
+```python def graficar_promedio_calificacion_por_autor():```
+
+![image](https://github.com/user-attachments/assets/094ae472-46ce-4cb4-b6d4-b05126fb8ec0)
+
+---
+
+### Distribución de calificaciones
+
+Histograma que muestra la frecuencia de cada calificación asignada a los libros. Permite observar si las calificaciones están distribuidas uniformemente o si hay alguna tendencia clara (por ejemplo, mayoría de calificaciones altas o bajas).
+
+```python def graficar_distribucion_calificaciones():```
+![image](https://github.com/user-attachments/assets/8a0fad82-214b-465f-9958-969f4fe5c5ad)
+
+---
+
+### Distribución de libros por nacionalidad del autor
+
+Gráfico circular (torta) que representa el porcentaje de libros según la nacionalidad de sus autores.
+
+```python def graficar_libros_por_nacionalidad():```
+![image](https://github.com/user-attachments/assets/de8de72d-92a8-47a4-8e00-3ccd2b58243f)
 
 
 
