@@ -306,6 +306,47 @@ def graficar_libros_por_nacionalidad():
 
 ![image](https://github.com/user-attachments/assets/de8de72d-92a8-47a4-8e00-3ccd2b58243f)
 
+Claro, aquí tenés una **descripción para tu README** especificando que el proyecto está bajo la **Licencia MIT**, lista para copiar y pegar:
+
+---
+
+##  Licencia
+
+Este proyecto está licenciado bajo la **Licencia MIT**.
+
+Esto significa que sos libre de:
+
+* Usar el código para fines personales o comerciales.
+* Modificarlo y adaptarlo a tus necesidades.
+* Compartirlo o integrarlo en otros proyectos.
+
+**Siempre y cuando** se mantenga el aviso de copyright original y la licencia MIT.
+
+Aquí tienes las licencias para las bibliotecas que mencionaste, en formato listo para añadir a tu README:
+
+---
+
+##  Licencias de las bibliotecas utilizadas
+
+| Biblioteca                                 | Licencia                           |
+| ------------------------------------------ | ---------------------------------- |
+| **asgiref 3.7.2**                          | BSD‑3‑Clause ([github.com][1])     |
+| **Django 4.2.21**                          | BSD‑3‑Clause *(igual que asgiref)* |
+| **djangorestframework 3.14.0**             | BSD‑3‑Clause                       |
+| **matplotlib 3.8.4**                       | PSF License *(compatible con BSD)* |
+| **cycler 0.12.1**                          | MIT *(derivado de Matplotlib)*     |
+| **fonttools 4.51.0**                       | Apache‑2.0                         |
+| **kiwisolver 1.4.5**                       | BSD                                |
+| **numpy 1.24.4**                           | BSD                                |
+| **packaging 24.0**                         | BSD                                |
+| **pillow 10.3.0**                          | PIL Software License *(BSD-like)*  |
+| **pyparsing 3.1.2**                        | MIT                                |
+| **python-dateutil 2.9.0.post0**            | Simplified BSD                     |
+| **six 1.16.0**                             | MIT                                |
+| **psycopg2 2.9.9 / psycopg2‑binary 2.9.9** | LGPL (con excepciones)             |
+| **tzdata 2024.1**                          | CC0 *(público dominio)*            |
+
+
 
 
 
