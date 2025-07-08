@@ -61,9 +61,21 @@ cd Libro
 python manage.py startapp libros
 ```
 
-## Crear la base de datos en PGAdmin4
+## Crear la base de datos en PGAdmin4 y conectar con el proyecto-
 ![image](https://github.com/user-attachments/assets/d7ebb0d8-d411-4085-865d-b01f7c80602d)
 
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Libros',
+        'USER': 'analia',
+        'PASSWORD': 'Sdaawys123*',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
 ### Migrar la base de datos:
 ```
 python manage.py makemigrations
