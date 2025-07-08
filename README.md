@@ -256,7 +256,6 @@ Dentro del proyecto se incluyen **scripts independientes** que permiten analizar
 
 * Cantidad de libros por autor.
 * Promedio de calificación por género.
-* Sugerencias basadas en calificaciones altas.
 
 Los scripts no forman parte del flujo del servidor Django (vistas o URLs), pero se ejecutan directamente desde la terminal para generar reportes visuales.
 
@@ -266,7 +265,7 @@ Los scripts no forman parte del flujo del servidor Django (vistas o URLs), pero 
 python Libro/graficos.py
 ```
 
-Antes de ejecutar, asegurar de que el entorno virtual esté activado y que la base de datos tenga registros cargados.
+Antes de ejecutar, se asegura de que el entorno virtual esté activado y que la base de datos tenga registros cargados.
 
 Biblioteca utilizadas para los Scripts
 
