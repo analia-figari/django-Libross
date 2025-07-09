@@ -255,15 +255,7 @@ Entonces se cambia y actualiza lo deseado:
 Dentro del proyecto se incluyen **scripts independientes** que permiten analizar los datos registrados en la base de datos. Estos scripts utilizan `matplotlib` para generar **gráficos estadísticos**, como por ejemplo:
 
 * Cantidad de libros por autor.
-* Promedio de calificación por género.
-
-Los scripts no forman parte del flujo del servidor Django (vistas o URLs), pero se ejecutan directamente desde la terminal para generar reportes visuales.
-
-> Para ejecutarlos:
-
-```bash
-python Libro/graficos.py
-```
+* Promedio de calificación por género
 
 Antes de ejecutar, se asegura de que el entorno virtual esté activado y que la base de datos tenga registros cargados.
 
@@ -292,7 +284,7 @@ Representa la cantidad total de libros agrupados por género literario.
 
 ### Libros según calificación
 
-Este gráfico muestra cuántos libros se encuentran dentro de cada rango de calificación (por ejemplo, del 1 al 5). 
+Muestra cuántos libros se encuentran dentro de cada rango de calificación (por ejemplo, del 1 al 5). 
 
 ![image](https://github.com/user-attachments/assets/b16f3b8f-9b21-496d-80c7-6c15f711d838)
 
@@ -300,7 +292,7 @@ Este gráfico muestra cuántos libros se encuentran dentro de cada rango de cali
 
 ### Promedio de calificación por autor
 
-Este gráfico presenta la calificación promedio de los libros escritos por cada autor. Ayuda a visualizar qué autores tienen una recepción más positiva en promedio por parte de los lectores.
+Presenta la calificación promedio de los libros escritos por cada autor. Ayuda a visualizar qué autores tienen una recepción más positiva en promedio por parte de los lectores.
 
 ```python 
 def graficar_promedio_calificacion_por_autor():
